@@ -47,6 +47,29 @@
                     </p>
                 <?php endif; ?>
 
+				<?php
+				$release_year = get_post_meta( get_the_ID(), 'release_year', true );
+				$rating       = get_post_meta( get_the_ID(), 'rating', true );
+				$runtime      = get_post_meta( get_the_ID(), 'runtime', true );
+				$language     = get_post_meta( get_the_ID(), 'language', true );
+				?>
+
+				<?php if ( $release_year ) : ?>
+    				<p><strong>Year:</strong> <?php echo esc_html( $release_year ); ?></p>
+				<?php endif; ?>
+
+				<?php if ( $rating ) : ?>
+    				<p><strong>Rating:</strong> <?php echo esc_html( $rating ); ?> / 10</p>
+				<?php endif; ?>
+
+				<?php if ( $runtime ) : ?>
+    				<p><strong>Runtime:</strong> <?php echo esc_html( $runtime ); ?></p>
+				<?php endif; ?>
+
+				<?php if ( $language ) : ?>
+    				<p><strong>Language:</strong> <?php echo esc_html( $language ); ?></p>
+				<?php endif; ?>
+
                 <p><small><?php the_date(); ?></small></p>
 
             </article>
