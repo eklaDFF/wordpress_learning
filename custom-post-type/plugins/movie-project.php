@@ -45,7 +45,7 @@ function create_movie_taxonomies() {
         'all_items'     => 'All Genres',
         'edit_item'     => 'Edit Genres',
         'add_new_item'  => 'Add New Genre',
-        'menu_name'     => 'Genres',   // ✅ fixed: was 'menu_item'
+        'menu_name'     => 'Genres',
     );
 
     register_taxonomy(
@@ -53,7 +53,7 @@ function create_movie_taxonomies() {
         'movie',
         array(
             'labels'       => $genre_labels,
-            'hierarchical' => true,    // ✅ correct spelling
+            'hierarchical' => true,
             'public'       => true,
             'rewrite'      => array( 'slug' => 'genre' ),
         )
@@ -68,7 +68,7 @@ function create_movie_taxonomies() {
         'all_items'     => 'All Directors',
         'edit_item'     => 'Edit Director',
         'add_new_item'  => 'Add New Director',
-        'menu_name'     => 'Directors',  // ✅ fixed: was 'menu_item'
+        'menu_name'     => 'Directors',
     );
 
     register_taxonomy(
@@ -76,7 +76,7 @@ function create_movie_taxonomies() {
         'movie',
         array(
             'labels'       => $director_labels,
-            'hierarchical' => false,   // ✅ fixed: was 'hierachical'
+            'hierarchical' => false,
             'public'       => true,
             'rewrite'      => array( 'slug' => 'director' ),
         )
